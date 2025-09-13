@@ -59,13 +59,10 @@ console.log(executeWork(createEmployee(1000)));  // Getting to director tasks
 //7. String literal types
 type Subjects = 'Math' | 'History';
 
-function teachClass(todayClass: Subjects): string {
-  if (todayClass === 'Math') {
-    return 'Teaching Math';
-  } else {
-    return 'Teaching History';
-  }
+function teachClass(todayClass:Subjects): string {
+  return todayClass === 'Math' ? 'Teaching Math' : 'Teaching History';
 }
+
 
 console.log(teachClass('Math'));    // Teaching Math
 console.log(teachClass('History')); // Teaching History
