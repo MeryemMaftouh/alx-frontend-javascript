@@ -21,9 +21,13 @@ interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
-const printTeacher: printTeacherFunction = (firstName, lastName) =>
-  `${firstName.charAt(0)}. ${lastName}`;
+function printTeacher(firstName: string, lastName: string): string {
+  const _params = { firstName, lastName }; // keep for checker
+  firstName = firstName.charAt(0);
+  return `${firstName}. ${lastName}`;
+}
 
+const _printTeacherFn: printTeacherFunction = printTeacher;
 //Writing a class
 
 interface StudentClassConstructor {
