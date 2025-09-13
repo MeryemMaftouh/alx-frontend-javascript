@@ -48,7 +48,7 @@ class StudentClass {
   }
 
   displayName(): string {
-    return this.firstName; // returns the firstName initialized in the constructor
+    return this.lastName; 
   }
 }
 
