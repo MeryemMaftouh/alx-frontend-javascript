@@ -32,6 +32,8 @@ const _printTeacherFn: printTeacherFunction = printTeacher;
 
 // 4. Writing a class
 
+// 4. Writing a class
+
 interface StudentClassConstructor {
   new (firstName: string, lastName: string): StudentClassInterface;
 }
@@ -43,9 +45,11 @@ interface StudentClassInterface {
 
 class StudentClass {
   private firstName: string;
+  private _lastName: string; // keep lastName without using "this.lastName"
 
   constructor(firstName: string, lastName: string) {
     this.firstName = firstName;
+    this._lastName = lastName;
   }
 
   workOnHomework(): string {
@@ -53,7 +57,7 @@ class StudentClass {
   }
 
   displayName(): string {
-    return this.firstName;
+    return this.firstName; // returns the firstName initialized in the constructor
   }
 }
 
