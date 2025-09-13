@@ -30,7 +30,6 @@ function printTeacher(firstName: string, lastName: string): string {
 const _printTeacherFn: printTeacherFunction = printTeacher;
 //Writing a class
 
-// task_1/js/main.ts
 
 interface StudentClassConstructor {
   new (firstName: string, lastName: string): StudentClassInterface;
@@ -41,8 +40,8 @@ interface StudentClassInterface {
   displayName(): string;
 }
 
-class StudentClass implements StudentClassInterface {
-  constructor(public firstName: string, private lastName: string) {}
+class StudentClass {
+  constructor(private firstName: string, lastName: string) {}
 
   workOnHomework(): string {
     return 'Currently working';
