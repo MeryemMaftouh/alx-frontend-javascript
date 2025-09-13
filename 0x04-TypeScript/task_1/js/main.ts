@@ -40,15 +40,21 @@ interface StudentClassInterface {
 }
 
 class StudentClass {
-  constructor(private firstName: string, lastName: string) {}
+  private firstName: string;
+
+  constructor(firstName: string, lastName: string) {
+    this.firstName = firstName;
+  }
 
   workOnHomework(): string {
     return 'Currently working';
   }
 
   displayName(): string {
-    return this.firstName; // returns the firstName initialized in the constructor
+    return this.firstName; 
   }
+}
+
 }
 
 
