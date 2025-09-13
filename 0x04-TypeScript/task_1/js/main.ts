@@ -30,6 +30,8 @@ function printTeacher(firstName: string, lastName: string): string {
 const _printTeacherFn: printTeacherFunction = printTeacher;
 //Writing a class
 
+// 4. Writing a class
+
 interface StudentClassConstructor {
   new (firstName: string, lastName: string): StudentClassInterface;
 }
@@ -54,3 +56,4 @@ class StudentClass {
     return this.firstName;
   }
 }
+
